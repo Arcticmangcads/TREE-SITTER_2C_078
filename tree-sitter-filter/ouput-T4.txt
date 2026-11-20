@@ -1,0 +1,29 @@
+(query [0, 0] - [0, 66]
+  (and_expression [0, 0] - [0, 66]
+    left: (in_expression [0, 0] - [0, 29]
+      field: (identifier [0, 0] - [0, 6])
+      value: (string [0, 11] - [0, 17])
+      value: (string [0, 19] - [0, 28]))
+    right: (parenthesized [0, 34] - [0, 66]
+      (or_expression [0, 35] - [0, 65]
+        left: (comparison [0, 35] - [0, 47]
+          field: (identifier [0, 35] - [0, 43])
+          value: (number [0, 46] - [0, 47]))
+        right: (comparison [0, 51] - [0, 65]
+          field: (identifier [0, 51] - [0, 56])
+          value: (string [0, 59] - [0, 65]))))))
+
+tree-sitter test
+  dasar:
+      1. ✓ comparison string
+      2. ✓ comparison angka dengan operator >=
+      3. ✓ comparison boolean
+      4. ✓ and lebih kuat dari or (or di depan)
+      5. ✓ and lebih kuat dari or (and di depan)
+      6. ✓ kurung mengubah prioritas
+      7. ✓ not
+      8. ✓ in dengan tiga nilai
+      9. ✓ contains
+     10. ✓ nama field dengan titik
+
+Total parses: 10; successful parses: 10; failed parses: 0; success percentage: 100.00%; average speed: 195 bytes/ms

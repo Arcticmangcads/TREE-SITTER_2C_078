@@ -1,0 +1,157 @@
+==================
+comparison string
+==================
+
+status = "open"
+
+---
+
+(query
+  (comparison
+    field: (identifier)
+    value: (string)))
+
+==================
+comparison angka dengan operator >=
+==================
+
+priority >= 2
+
+---
+
+(query
+  (comparison
+    field: (identifier)
+    value: (number)))
+
+==================
+comparison boolean
+==================
+
+archived = true
+
+---
+
+(query
+  (comparison
+    field: (identifier)
+    value: (boolean)))
+
+==================
+and lebih kuat dari or (or di depan)
+==================
+
+a = 1 or b = 2 and c = 3
+
+---
+
+(query
+  (or_expression
+    left: (comparison
+      field: (identifier)
+      value: (number))
+    right: (and_expression
+      left: (comparison
+        field: (identifier)
+        value: (number))
+      right: (comparison
+        field: (identifier)
+        value: (number)))))
+
+==================
+and lebih kuat dari or (and di depan)
+==================
+
+a = 1 and b = 2 or c = 3
+
+---
+
+(query
+  (or_expression
+    left: (and_expression
+      left: (comparison
+        field: (identifier)
+        value: (number))
+      right: (comparison
+        field: (identifier)
+        value: (number)))
+    right: (comparison
+      field: (identifier)
+      value: (number))))
+
+==================
+kurung mengubah prioritas
+==================
+
+(a = 1 or b = 2) and c = 3
+
+---
+
+(query
+  (and_expression
+    left: (parenthesized
+      (or_expression
+        left: (comparison
+          field: (identifier)
+          value: (number))
+        right: (comparison
+          field: (identifier)
+          value: (number))))
+    right: (comparison
+      field: (identifier)
+      value: (number))))
+
+==================
+not
+==================
+
+not archived = true
+
+---
+
+(query
+  (not_expression
+    operand: (comparison
+      field: (identifier)
+      value: (boolean))))
+
+==================
+in dengan tiga nilai
+==================
+
+status in ("open", "pending", "closed")
+
+---
+
+(query
+  (in_expression
+    field: (identifier)
+    value: (string)
+    value: (string)
+    value: (string)))
+
+==================
+contains
+==================
+
+title contains "invoice"
+
+---
+
+(query
+  (contains_expression
+    field: (identifier)
+    value: (string)))
+
+==================
+nama field dengan titik
+==================
+
+customer.city = "Bandung"
+
+---
+
+(query
+  (comparison
+    field: (identifier)
+    value: (string)))
