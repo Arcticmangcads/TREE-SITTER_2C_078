@@ -1,0 +1,22 @@
+PS D:\sarjanaTerapan\TAHUN-KEDUA\SEMESTER-3\Programming Pragmatics\TREE-SITTER_2C_078> python jelajah.py kecil.py
+module [1:0]
+  expression_statement [1:0]
+    assignment [1:0]
+      left: identifier [1:0]
+      right: integer [1:4]
+PS D:\sarjanaTerapan\TA^C                                     tics\TREE-SITTER_2C_078> 
+PS D:\sarjanaTerapan\TAHUN-KEDUA\SEMESTER-3\Programming Pragmatics\TREE-SITTER_2C_078> python q_fungsi.py contoh.py fungsi.scm
+tambah 2
+kali 3
+halo 0
+bagi 3
+PS D:\sarjanaTerapan\TAHUN-KEDUA\SEMESTER-3\Programming Pragmatics\TREE-SITTER_2C_078> python q.py contoh.py print.scm
+@fn  baris 9: print
+@fn  baris 13: print
+@args  baris 9: (a, b)
+@args  baris 13: ("halo")
+PS D:\sarjanaTerapan\TAHUN-KEDUA\SEMESTER-3\Programming Pragmatics\TREE-SITTER_2C_078> python q.py contoh.py import.scm
+@modul  baris 1: os
+@modul  baris 2: pathlib
+PS D:\sarjanaTerapan\TAHUN-KEDUA\SEMESTER-3\Programming Pragmatics\TREE-SITTER_2C_078> python q.py contoh.py docstring.scm
+@doc  baris 5: """Menjumlahkan dua angka."""

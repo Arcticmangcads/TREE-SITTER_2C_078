@@ -1,0 +1,35 @@
+PS D:\sarjanaTerapan\TAHUN-KEDUA\SEMESTER-3\Programming Pragmatics\TREE-SITTER_2C_078> python t1.py
+=== fungsi ===
+(module (function_definition name: (identifier) parameters: (parameters (identifier)) body: (block (return_statement (identifier)))))
+has_error: False
+   def anonim
+   identifier bernama
+   parameters bernama
+   : anonim
+   block bernama
+
+=== if_else ===
+(module (if_statement condition: (comparison_operator (identifier) (integer)) consequence: (block (expression_statement (assignment left: (identifier) right: (integer)))) alternative: (else_clause body: (block (expression_statement (assignment left: (identifier) right: (integer)))))))
+has_error: False
+   if anonim
+   comparison_operator bernama
+   : anonim
+   block bernama
+   else_clause bernama
+
+=== kelas ===
+(module (class_definition name: (identifier) body: (block (function_definition name: (identifier) parameters: (parameters (identifier)) body: (block (return_statement (string (string_start) (string_content) (string_end))))))))
+has_error: False
+   class anonim
+   identifier bernama
+   : anonim
+   block bernama
+
+=== rusak ===
+(module (ERROR (identifier) (parameters (identifier)) (identifier)))
+has_error: True
+   def anonim
+   identifier bernama
+   parameters bernama
+   return anonim
+   identifier bernama

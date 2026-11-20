@@ -1,0 +1,6 @@
+PS D:\sarjanaTerapan\TAHUN-KEDUA\SEMESTER-3\Programming Pragmatics\TREE-SITTER_2C_078> python jelajah.py kecil.py
+module [1:0]
+  expression_statement [1:0]
+    assignment [1:0]
+      left: identifier [1:0]
+      right: integer [1:4]
