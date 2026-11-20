@@ -6,9 +6,8 @@
       "camelcase": "Fil",
       "title": "Filter",
       "scope": "source.filter",
-      "file-types": [
-        "filter"
-      ],
+      "file-types": ["filter"],
+      "highlights": "queries/highlights.scm",
       "injection-regex": "^filter$",
       "class-name": "TreeSitterFilter"
     }
